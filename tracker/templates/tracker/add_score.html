@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Study Score</title>
+    <style>
+        input, select { padding: 5px; margin: 5px 0; width: 100%; }
+        .container { max-width: 400px; margin: 50px auto; }
+        button { padding: 10px; background-color: #4CAF50; color: white; border: none; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Add Study Score</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+    <br>
+    <a href="{% url 'view_scores' %}">View All Scores</a>
+</div>
+</body>
+</html>
